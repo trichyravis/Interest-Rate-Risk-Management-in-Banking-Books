@@ -1,3 +1,4 @@
+
 """
 Interest Rate Risk in the Banking Book (IRRBB) — Interactive Learning Application
 The Mountain Path Academy — World of Finance
@@ -999,8 +1000,8 @@ elif page == "🏦 Case Studies (3 Banks)":
         fig.update_layout(**plotly_theme(),
             title=dict(text="NII Impact by Scenario", font=dict(color=GOLD, size=14)),
             height=400, margin=dict(l=50, r=20, t=50, b=80),
-            yaxis_title=f"ΔNII ({case['currency']})",
-            xaxis=dict(tickangle=-25))
+            yaxis_title=f"ΔNII ({case['currency']})")
+        fig.update_xaxes(tickangle=-25)
         st.plotly_chart(fig, use_container_width=True, key=f"nii_{case_name[:10]}")
 
     with t4:
